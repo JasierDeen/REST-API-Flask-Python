@@ -69,5 +69,11 @@ CMD ["gunicorn", "--bind", "0.0.0.0:80", "app:create_app()"]
 ```
 
 ```
-docker run -dp 5000:5000 -w /app -v "C:/Users/91997/Desktop/REST-API-Flask-Python:/app" IMAGE_NAME sh -c "flask run"
+docker run -dp 5000:5000 -w /app -v "C:/Users/91997/Desktop/REST-API-Flask-Python:/app" <IMAGE_NAME> sh -c "flask run --host 0.0.0.0"
 ```
+
+## Used Websites
+
+1. Deployment ---> render.com
+2. Postresql ---> elephantsql.com
+3. Email mechanisam ---> mailgun.com
