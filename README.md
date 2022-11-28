@@ -77,3 +77,13 @@ docker run -dp 5000:5000 -w /app -v "C:/Users/91997/Desktop/REST-API-Flask-Pytho
 1. Deployment ---> render.com
 2. Postresql ---> elephantsql.com
 3. Email mechanisam ---> mailgun.com
+
+## Redis queue
+
+```
+docker build -t rest-apis-flask-tasks-rq .
+
+docker run -p 5000:5000 rest-apis-flask-tasks-rq sh -c "flask run --host 0.0.0.0"
+
+docker run -w /app rest-apis-flask-tasks-rq sh -c "rq worker -u <insert your Redis url here> emails"
+```
